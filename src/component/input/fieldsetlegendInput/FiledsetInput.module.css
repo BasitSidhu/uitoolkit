@@ -1,0 +1,121 @@
+.formGroup {
+  position: relative;
+  margin: 30px;
+  width: 250px;
+}
+
+.formInput {
+  width: 100%;
+  padding: 14px 12px 6px;
+  border: 2px solid #1976d2;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+}
+
+.formLabel {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  background-color: white;
+  color: #1976d2;
+  font-size: 16px;
+  padding: 0 4px;
+  transition: 0.2s ease all;
+  pointer-events: none;
+}
+
+.formInput:focus + .formLabel,
+.formInput:not(:placeholder-shown) + .formLabel {
+  top: 0px;
+  font-size: 12px;
+  color: #1976d2;
+}
+
+.formInput:hover {
+  border-color: #1565c0;
+}
+
+.formGroup1 {
+  position: relative;
+  width: max-content;
+  overflow: hidden; /* Important to hide overflow */
+}
+
+.formGroup1::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: #1565c0;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.formGroup1:hover::after {
+  animation: anchor-underline 4s ease-in-out infinite;
+}
+
+@keyframes anchor-underline {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  40% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  60% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+.formInput1 {
+  width: 100%;
+  padding: 14px 12px 6px;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+}
+
+.formInput1:focus + .formLabel,
+.formInput1:not(:placeholder-shown) + .formLabel {
+  top: 10px;
+  font-size: 12px;
+  color: #1976d2;
+}
+
+.heading {
+  margin-top: 1rem;
+  position: relative;
+  width: max-content;
+}
+.heading input {
+  padding: 5px 10px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  outline: none;
+}
+.heading::after {
+  content: "";
+  position: absolute;
+  background-color: red;
+  width: 0px;
+  height: 10px;
+  bottom: 0;
+  left: 0;
+
+  transition: width 4s ease-in-out;
+}
+.heading:hover::after {
+  width: 100%;
+}

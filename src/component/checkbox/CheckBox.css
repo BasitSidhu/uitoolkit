@@ -1,0 +1,58 @@
+input[type="checkbox"] {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background-color: #888585;
+    border-radius: 10px;
+    border: 1px solid gray;
+    appearance: none;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"]:checked {
+    background-color: greenyellow;
+  }
+  
+  input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    top: 0cqmin;
+    left: 23px;
+    width: 50px;
+    height: 80px;
+    border: 20px solid transparent;
+    border-left: none;
+    border-top: none;
+    transform: rotate(45deg); /* Always tilted */
+    transition: transform 0.2s ease; /* Optional: makes the tilt smooth */
+  }
+  
+  input[type="checkbox"]:checked::after {
+    border-color: #fff;
+    animation: jelly 0.6s ease;
+  }
+  
+  @keyframes jelly {
+    0% {
+      transform: rotate(45deg) scale(1);
+    }
+    30% {
+      transform: rotate(45deg) scale(1.25, 0.75);
+    }
+    40% {
+      transform: rotate(45deg) scale(0.75, 1.25);
+    }
+    50% {
+      transform: rotate(45deg) scale(1.15, 0.85);
+    }
+    65% {
+      transform: rotate(45deg) scale(0.95, 1.05);
+    }
+    75% {
+      transform: rotate(45deg) scale(1.05, 0.95);
+    }
+    100% {
+      transform: rotate(45deg) scale(1);
+    }
+  }
+  

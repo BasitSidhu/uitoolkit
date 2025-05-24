@@ -1,0 +1,79 @@
+.buttonui {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.buttonStyle {
+  padding: 5px 50px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px rgba(255, 0, 0, 0.4);
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Shrink the button when clicked */
+.buttonStyle:active {
+  transform: scale(0.95); /* Shrinks the button */
+  box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.6); /* Optional: change shadow when clicked */
+}
+
+/* .buttonColor {
+  padding: 5px 50px;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  transition: backgroud-color 2s ease;
+}
+.buttonColor:hover{
+    background-color: brown;
+} */
+
+.buttonColor {
+  position: relative;
+  display: inline-block;
+  padding: 5px 50px;
+  color: white;
+  background: linear-gradient(to right, red 50%, blue 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-position 0.5s ease;
+}
+
+.buttonColor:hover {
+  background-position: left bottom;
+}
+
+/* Ripple effect of button  */
+
+.ripplebutton {
+    position: relative;
+    overflow: hidden;
+    background: blue;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+  
+  .ripple {
+    position: absolute;
+    background: rgba(255, 0, 0, 0.5);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+  }
+  
+  @keyframes ripple-animation {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }

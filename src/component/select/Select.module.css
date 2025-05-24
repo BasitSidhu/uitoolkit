@@ -1,0 +1,48 @@
+.selectcontainer {
+    width: 200px;
+    margin: 50px;
+    position: relative;
+  }
+  
+  .selectwrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .selectwrapper label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    background: white;
+    padding: 0 4px;
+    color: #3f51b5;
+    font-size: 14px;
+    pointer-events: none;
+    transition: all 0.2s ease;
+  }
+  
+  .selectwrapper.focused label {
+    top: 0;
+    left: 0.8rem;
+    transform: translateY(-50%) scale(0.8);
+    background: white;
+    color: #1a237e;
+  }
+  
+  .selectwrapper select {
+    width: 100%;
+    padding: 14px 12px 6px 12px;
+    font-size: 16px;
+    border: 2px solid #3f51b5;
+    border-radius: 6px;
+    outline: none;
+    appearance: none;
+    background: white url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 10px center;
+    background-size: 24px;
+  }
+  
+  .selectwrapper select:focus {
+    border-color: #1a237e;
+  }
+  

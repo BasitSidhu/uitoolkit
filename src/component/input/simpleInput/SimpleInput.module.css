@@ -1,0 +1,15 @@
+.simpleInput {
+  border: 2px solid gray;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+  padding: 5px 10px;
+  /* background: url("https://cdn-icons-png.flaticon.com/512/54/54481.png")
+    no-repeat 10px center; */
+  background-size: 20px; /* Size of the icon */
+  color: gray;
+}
+.simpleInput:hover,
+.simpleInput:focus {
+  border-color: rgb(166, 166, 233);
+}
